@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.urok1android2.ui.fragments.main.MainFragment"
+        android:label="fragment_blank"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_nameDetailFragment"
+            app:destination="@id/nameDetailFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_colorDetailFragment"
+            app:destination="@id/colorDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nameDetailFragment"
+        android:name="com.example.urok1android2.ui.fragments.detail.NameDetailFragment"
+        android:label="fragment_one"
+        tools:layout="@layout/fragment_detail_name" >
+    <argument
+        android:name="name"
+        app:argType="string"
+        android:defaultValue="" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/colorDetailFragment"
+        android:name="com.example.urok1android2.ui.fragments.detail.ColorDetailFragment"
+        android:label="fragment_two"
+        tools:layout="@layout/fragment_detail_color" >
+        <argument
+            android:name="color"
+            app:argType="string"
+            android:defaultValue=""/>
+    </fragment>
+
+</navigation>
